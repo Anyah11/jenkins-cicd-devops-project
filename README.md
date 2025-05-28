@@ -5,13 +5,16 @@ This project demonstrates how to set up a basic CI/CD pipeline using **Jenkins**
 🚀 Live Demo: [Click here](http://54.160.184.96:8086/webapp/)  
 ⚠️ Note: This public IP may change.
 
-## 🔧 Tools Used
-- **AWS EC2** (2 instances)
-- **Jenkins**
-- **Docker**
-- **Docker Compose**
-- **Tomcat (Docker image)**
-- **Jenkins plugins**: Publish Over SSH
+## 🛠 Tools & Technologies Used
+
+- **AWS EC2** – Hosted Jenkins and Docker on separate EC2 instances using the same key pair.
+- **Jenkins** – Used to automate the CI/CD pipeline.
+- **Docker & Docker Compose** – To containerize and deploy the web application.
+- **Tomcat** – Used as the runtime server in the Docker container.
+- **Publish Over SSH Plugin** – To enable Jenkins to deploy to the remote Docker EC2 instance.
+- **Poll SCM** – Jenkins was configured to monitor the Git repository for changes using *Poll SCM* (cron-style schedule), ensuring automatic builds whenever code was pushed.
+
+
 
 ## 🖥️ Architecture Overview
 
@@ -70,6 +73,16 @@ docker run -d --name registerapp -p 8086:8080 webapp:v1
 ```
 
 Test with 'docker --version' and 'docker-compose --version'
+
+## 🔁 CI/CD Flow
+
+1. Developer pushes code to GitHub.
+2. Jenkins (configured with Poll SCM: `*/2 * * * *`) checks for changes every 2 minutes.
+3. If changes are detected:
+   - Jenkins pulls the latest code.
+   - SSH connects to Docker EC2.
+   - Docker Compose is triggered to build and restart the containers.
+4. App is deployed to Tomcat inside a Docker container.
 
 📌 Notes
 
