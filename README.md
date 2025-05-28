@@ -1,4 +1,4 @@
-# Jenkins CI/CD Pipeline Project (Beginner-Friendly DevOps)
+# Jenkins CI/CD Pipeline Project
 
 This project demonstrates how to set up a basic CI/CD pipeline using **Jenkins**, **Docker**, and **AWS EC2**, based on the YouTube tutorial [DevOps Project from Scratch](https://www.youtube.com/watch?v=jv47sPxhUf8).
 
