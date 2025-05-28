@@ -2,6 +2,9 @@
 
 This project demonstrates how to set up a basic CI/CD pipeline using **Jenkins**, **Docker**, and **AWS EC2**, based on the YouTube tutorial [DevOps Project from Scratch](https://www.youtube.com/watch?v=jv47sPxhUf8).
 
+🚀 Live Demo: [Click here](http://54.160.184.96:8086/webapp/)  
+⚠️ Note: This public IP may change.
+
 ## 🔧 Tools Used
 - **AWS EC2** (2 instances)
 - **Jenkins**
