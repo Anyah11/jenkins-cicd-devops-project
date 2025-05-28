@@ -10,8 +10,6 @@ This project demonstrates how to set up a basic CI/CD pipeline using **Jenkins**
 - **Tomcat (Docker image)**
 - **Jenkins plugins**: Publish Over SSH
 
----
-
 ## 🖥️ Architecture Overview
 
 - **EC2 Instance 1**: Jenkins Server
